@@ -3,18 +3,103 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  height: 600px;
-  max-width: 1600px;
   background-color: $hero-background-color;
+  height: 400px;
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
 
   .div-hero-txt {
-    width: 696px;
+    width: 360px;
   }
 }
 
 .overlay {
   background-image: linear-gradient($overlay-color, $overlay-color),
-    url(../img/hero-banner.jpg);
+    url(../../img/hero/hero-mobile.jpg);
+  background-size: cover;
 }
+
+@media screen and (min-width: 768px) {
+  .hero-banner {
+    max-width: 768px;
+    height: 400px;
+  }
+
+  .overlay {
+    background-image: linear-gradient($overlay-color, $overlay-color),
+      url(../../img/hero/hero-tablet.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-banner {
+    height: 600px;
+    max-width: 1600px;
+
+    .div-hero-txt {
+      width: 696px;
+    }
+  }
+
+  .overlay {
+    background-image: linear-gradient($overlay-color, $overlay-color),
+      url(../../img/hero/hero-desktop.jpg);
+  }
+}
+
+// Картинки 2x для экранов retina
+// все картинки прошли оптимизатор
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 1600px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1600px),
+  screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1600px),
+  screen and (min-resolution: 192dpi) and (max-width: 1600px),
+  screen and (min-resolution: 2dppx) and (max-width: 1600px) {
+  .overlay {
+    background-image: linear-gradient($overlay-color, $overlay-color),
+      url(../../img/hero/hero-desktop@2x.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 1199px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1199px),
+  screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1199px),
+  screen and (min-resolution: 192dpi) and (max-width: 1199px),
+  screen and (min-resolution: 2dppx) and (max-width: 1199px) {
+  .overlay {
+    background-image: linear-gradient($overlay-color, $overlay-color),
+      url(../../img/hero/hero-tablet@2x.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .overlay {
+    background-image: linear-gradient($overlay-color, $overlay-color),
+      url(../../img/hero/hero-mobile@2x.jpg);
+  }
+}
+
+// .hero-banner {
+//   display: flex;
+//   text-align: center;
+//   justify-content: center;
+//   align-items: center;
+//   height: 600px;
+//   max-width: 1600px;
+//   background-color: $hero-background-color;
+//   margin-left: auto;
+//   margin-right: auto;
+
+//   .div-hero-txt {
+//     width: 696px;
+//   }
+// }
+
+// .overlay {
+//   background-image: linear-gradient($overlay-color, $overlay-color),
+//     url(../img/hero-banner.jpg);
+// }
