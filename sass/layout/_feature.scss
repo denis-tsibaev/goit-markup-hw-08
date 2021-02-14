@@ -1,37 +1,101 @@
 .feature {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   .feature-list {
-    display: flex;
-    justify-content: space-between;
-
-    h3 {
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-top: 0;
-      margin-bottom: 10px;
-      color: $main-dark-color;
-    }
-
-    p {
-      margin: 0;
-      line-height: 1.71;
-      color: $second-dark-color;
-    }
+    text-align: center;
 
     .item {
-      max-width: 270px;
-
       .feature-icon-background {
-        width: 270px;
-        height: 120px;
         background-color: $background-team-section;
-        margin-bottom: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
+        max-width: 767px;
+        height: 120px;
+        margin-bottom: 30px;
+      }
+
+      .feature-title {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $main-dark-color;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      .feature-text {
+        text-align: start;
+        line-height: 1.71;
+        color: $second-dark-color;
+        margin-top: 0;
+        margin-bottom: 30px;
+      }
+
+      .feature-text.no-padding {
+        margin-bottom: 0;
       }
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  .feature {
+    .feature-list {
+      display: flex;
+      flex-wrap: wrap;
+
+      .item {
+        width: 354px;
+        text-align: left;
+
+        .feature-icon-background {
+          width: 354px;
+          height: 120px;
+          background-color: $background-team-section;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+// .feature {
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+
+//   .feature-list {
+//     display: flex;
+//     justify-content: space-between;
+
+//     .feature-title {
+//       font-weight: 700;
+//       text-transform: uppercase;
+//       margin-top: 0;
+//       margin-bottom: 10px;
+//       color: $main-dark-color;
+//     }
+
+//     .feature-text  {
+//       margin: 0;
+//       line-height: 1.71;
+//       color: $second-dark-color;
+//     }
+
+//     .item {
+//       max-width: 270px;
+
+//       .feature-icon-background {
+//         width: 270px;
+//         height: 120px;
+//         background-color: $background-team-section;
+//         margin-bottom: 30px;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//       }
+//     }
+//   }
+// }
