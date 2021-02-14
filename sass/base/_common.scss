@@ -1,0 +1,85 @@
+body {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1428;
+  letter-spacing: 0.03em;
+  color: $main-dark-color;
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $white-color;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.167;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: $main-dark-color;
+  font-weight: 500;
+
+  &:hover:not(.logo):not(.project-link),
+  &:focus:not(.logo):not(.project-link) {
+    color: $accent-color;
+  }
+}
+
+.logo-accent {
+  color: $accent-color;
+}
+
+.logo {
+  font-family: $second-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.footer .logo {
+  margin-bottom: 20px;
+  color: $white-color;
+}
+
+//    Основной контейнер
+// ограничение по ширине
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+address {
+  //  убирает курсив адреса
+  font-style: normal;
+  line-height: 1.71;
+  color: $white-color;
+}

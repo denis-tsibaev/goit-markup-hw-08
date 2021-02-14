@@ -1,0 +1,34 @@
+.business {
+  padding-bottom: 94px;
+
+  .business-list {
+    display: flex;
+    justify-content: space-between;
+
+    .item {
+      width: 370px;
+
+      .business-thumb {
+        position: relative;
+
+        .overlay-business {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 70px;
+          padding: 27px;
+          text-align: center;
+          background-color: rgba(47, 48, 58, 0.8);
+
+          h3 {
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $white-color;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

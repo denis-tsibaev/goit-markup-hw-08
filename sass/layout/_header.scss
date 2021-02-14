@@ -1,0 +1,78 @@
+.header-portfolio {
+  border-bottom: 1px solid $header-border;
+}
+
+.flex-cont {
+  display: flex;
+  justify-content: space-between;
+
+  .navigation {
+    display: flex;
+    align-items: center;
+
+    .nav-list {
+      display: flex;
+      margin-left: 93px;
+
+      .item + .item {
+        margin-left: 50px;
+      }
+
+      .item a {
+        padding-top: 33px;
+        padding-bottom: 33px;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .current {
+        color: $accent-color;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          display: block;
+          width: 100%;
+          height: 4px;
+          border-radius: 2px;
+          background-color: $accent-color;
+        }
+      }
+    }
+  }
+
+  .contacts-list {
+    display: flex;
+    align-items: center;
+
+    .item + .item {
+      margin-left: 50px;
+    }
+
+    .contacts-link {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: $second-dark-color;
+      padding-top: 33px;
+      padding-bottom: 33px;
+      fill: $second-dark-color;
+      transition-property: color, fill;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover svg,
+      &:focus svg {
+        fill: $accent-color;
+      }
+    }
+
+    .item svg {
+      margin-right: 10px;
+    }
+  }
+}
