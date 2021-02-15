@@ -11,7 +11,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 767px;
         height: 120px;
         margin-bottom: 30px;
       }
@@ -44,24 +43,33 @@
     .feature-list {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
+
+      .item:nth-child(2n) {
+        margin-left: 30px;
+      }
 
       .item {
         width: 354px;
         text-align: left;
-
-        .feature-icon-background {
-          width: 354px;
-          height: 120px;
-          background-color: $background-team-section;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-bottom: 30px;
-        }
       }
     }
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .feature {
+    .feature-list {
+      .item {
+        width: 270px;
+      }
+      .item:nth-child(3) {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
 // .feature {
 //   padding-top: 94px;
 //   padding-bottom: 94px;
