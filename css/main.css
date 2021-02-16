@@ -11,8 +11,8 @@ body {
 h1 {
   font-size: 26px;
   line-height: 1.62;
-  letter-spacing: 0.06em;
   font-weight: 900;
+  letter-spacing: 0.06em;
   color: #ffffff;
   text-transform: uppercase;
   margin-top: 0;
@@ -28,11 +28,19 @@ h1 {
 
 h2 {
   font-size: 36px;
-  font-weight: 700;
   line-height: 1.167;
+  font-weight: 700;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 28px;
+    line-height: 1.178;
+    margin-bottom: 50px;
+  }
 }
 
 ul {
@@ -439,7 +447,7 @@ address {
 }
 
 .form-footer-label {
-  display: inline-block;
+  display: block;
   margin-right: 12px;
 }
 
@@ -447,7 +455,7 @@ address {
   padding: 0;
   outline-style: none;
   color: #ffffff;
-  width: 358px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -455,17 +463,29 @@ address {
   background-color: transparent;
   padding-left: 16px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 20px;
 }
 
 .form-footer-input:focus {
   border-color: #2196f3;
 }
 
+@media screen and (min-width: 1200px) {
+  .form-footer-input {
+    margin-bottom: 0;
+    width: 358px;
+  }
+  .form-footer-label {
+    display: inline-block;
+    margin-right: 12px;
+  }
+}
+
 .hero-banner {
   display: flex;
-  text-align: center;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-color: #2f303a;
   height: 400px;
   max-width: 480px;
@@ -832,11 +852,13 @@ address {
 .customers .customers-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .customers .customers-list .customer-list-item {
   width: 210px;
   height: 90px;
+  margin-bottom: 30px;
 }
 
 .customers .customers-list .customer-list-item .customer-logo-link {
@@ -858,26 +880,67 @@ address {
   fill: #2196f3;
 }
 
-.customers .customers-list .customer-list-item {
-  margin-bottom: 30px;
+.customers .customers-list .customer-list-item:nth-child(5),
+.customers .customers-list .customer-list-item:nth-child(6) {
+  margin-bottom: 0;
 }
 
 .customers .customers-list .customer-list-item:nth-child(odd) {
   margin-right: 30px;
 }
 
+@media screen and (min-width: 768px) {
+  .customers .customers-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .customers .customers-list .customer-list-item {
+    width: 226px;
+    height: 90px;
+  }
+  .customers .customers-list .customer-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .customers .customers-list .customer-list-item:nth-child(3) {
+    margin-right: 0;
+  }
+  .customers .customers-list .customer-list-item:nth-child(4),
+  .customers .customers-list .customer-list-item:nth-child(5),
+  .customers .customers-list .customer-list-item:nth-child(6) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .customers {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .customers .customers-list .customer-list-item:nth-child(1),
+  .customers .customers-list .customer-list-item:nth-child(2),
+  .customers .customers-list .customer-list-item:nth-child(3),
+  .customers .customers-list .customer-list-item:nth-child(4),
+  .customers .customers-list .customer-list-item:nth-child(5),
+  .customers .customers-list .customer-list-item:nth-child(6) {
+    margin: 0;
+  }
+  .customers .customers-list .customer-list-item {
+    width: 170px;
+    height: 90px;
+  }
+  .customers .customers-list .customer-list-item + .customer-list-item {
+    margin-left: 30px;
+  }
+}
+
 .footer {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+  text-align: center;
 }
 
-.footer .container {
-  display: flex;
-  align-items: baseline;
-}
-
-.footer .container h3 {
+.footer .footer-title {
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
@@ -885,19 +948,15 @@ address {
   margin-bottom: 20px;
 }
 
-.footer .container .left-side {
-  margin-right: 70px;
+.footer .left-side address {
+  margin-bottom: 8px;
 }
 
-.footer .container .left-side address {
-  margin-bottom: 9px;
+.footer .left-side .footer-list {
+  margin-bottom: 60px;
 }
 
-.footer .container .left-side .footer-list .item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.footer .container .left-side .footer-contacts-link {
+.footer .left-side .footer-list .item .footer-contacts-link {
   line-height: 1.714;
   color: rgba(255, 255, 255, 0.6);
   transition-property: color;
@@ -905,28 +964,26 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer .container .left-side .footer-contacts-link:hover, .footer .container .left-side .footer-contacts-link:focus {
+.footer .left-side .footer-list .item .footer-contacts-link:hover, .footer .left-side .footer-list .item .footer-contacts-link:focus {
   color: #2196f3;
 }
 
-.footer .container .right-side {
+.footer .left-side .footer-list .item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.footer .right-side .footer-socialnet-list {
   display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
 }
 
-.footer .container .right-side .footer-block-socialnet {
-  margin-right: 93px;
-}
-
-.footer .container .footer-socialnet-list {
-  display: flex;
-}
-
-.footer .container .footer-socialnet-list li {
+.footer .right-side .footer-socialnet-list li {
   width: 44px;
   height: 44px;
 }
 
-.footer .container .footer-socialnet-list li .footer-socialnet-link {
+.footer .right-side .footer-socialnet-list li .footer-socialnet-link {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -940,11 +997,11 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer .container .footer-socialnet-list li .footer-socialnet-link:hover, .footer .container .footer-socialnet-list li .footer-socialnet-link:focus {
+.footer .right-side .footer-socialnet-list li .footer-socialnet-link:hover, .footer .right-side .footer-socialnet-list li .footer-socialnet-link:focus {
   background-color: #2196f3;
 }
 
-.footer .container .footer-socialnet-list li + li {
+.footer .right-side .footer-socialnet-list li + li {
   margin-left: 10px;
 }
 /*# sourceMappingURL=main.css.map */
