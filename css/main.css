@@ -508,7 +508,7 @@ address {
 }
 
 .overlay {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/hero/hero-mobile.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/../img/hero/hero-mobile.jpg);
   background-size: cover;
 }
 
@@ -518,7 +518,7 @@ address {
     height: 400px;
   }
   .overlay {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/hero/hero-tablet.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/../img/hero/hero-tablet.jpg);
   }
 }
 
@@ -531,7 +531,7 @@ address {
     width: 696px;
   }
   .overlay {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/hero/hero-desktop.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/../img/hero/hero-desktop.jpg);
   }
 }
 

@@ -16,7 +16,7 @@
 
 .overlay {
   background-image: linear-gradient($overlay-color, $overlay-color),
-    url(../../img/hero/hero-mobile.jpg);
+    url(/../img/hero/hero-mobile.jpg);
   background-size: cover;
 }
 
@@ -28,7 +28,7 @@
 
   .overlay {
     background-image: linear-gradient($overlay-color, $overlay-color),
-      url(../../img/hero/hero-tablet.jpg);
+      url(/../img/hero/hero-tablet.jpg);
   }
 }
 
@@ -44,7 +44,7 @@
 
   .overlay {
     background-image: linear-gradient($overlay-color, $overlay-color),
-      url(../../img/hero/hero-desktop.jpg);
+      url(/../img/hero/hero-desktop.jpg);
   }
 }
 
