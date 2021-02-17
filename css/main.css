@@ -497,8 +497,8 @@ address {
   align-items: center;
   text-align: center;
   background-color: #2f303a;
-  height: 400px;
   max-width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -508,7 +508,7 @@ address {
 }
 
 .overlay {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/hero/hero-mobile.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero-mobile.jpg);
   background-size: cover;
 }
 
@@ -518,20 +518,20 @@ address {
     height: 400px;
   }
   .overlay {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/hero/hero-tablet.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero-tablet.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero-banner {
-    height: 600px;
     max-width: 1600px;
+    height: 600px;
   }
   .hero-banner .div-hero-txt {
     width: 696px;
   }
   .overlay {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/hero/hero-desktop.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero-desktop.jpg);
   }
 }
 
