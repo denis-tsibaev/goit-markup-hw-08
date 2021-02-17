@@ -125,8 +125,7 @@
   padding: 0;
   outline-style: none;
   color: $white-color;
-  //   width: 358px;
-  width: 100%;
+  width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -141,7 +140,18 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .form-footer-input {
+    width: 450px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
+  form {
+    display: flex;
+    align-items: baseline;
+  }
+
   .form-footer-input {
     margin-bottom: 0;
     width: 358px;
