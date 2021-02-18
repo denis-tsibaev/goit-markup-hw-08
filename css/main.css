@@ -73,8 +73,15 @@ a:hover:not(.logo):not(.project-link), a:focus:not(.logo):not(.project-link) {
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.167;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.192;
+  }
 }
 
 .footer .logo {
@@ -491,31 +498,115 @@ address {
   }
 }
 
+.header-portfolio {
+  border-bottom: 1px solid #ececec;
+}
+
 header .contacts-list,
 header .nav-list {
   display: none;
 }
 
 header .flex-cont .navigation {
-  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+header .flex-cont .navigation .mobile-burger-icon {
+  padding: 21px 0 20px 21px;
+}
+
 @media screen and (min-width: 768px) {
-  header .contacts-list,
-  header .nav-list {
+  header .flex-cont {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .flex-cont .navigation .logo {
+    margin-right: 88px;
   }
   header .flex-cont .navigation .mobile-burger-icon {
     display: none;
   }
+  header .flex-cont .navigation .nav-list {
+    display: flex;
+  }
   header .flex-cont .navigation .nav-list .item + .item {
     margin-left: 50px;
   }
-  header .flex-cont .navigation .contacts-list .item + .item {
+  header .flex-cont .navigation .nav-list .item a {
+    padding-top: 33px;
+    padding-bottom: 33px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  header .flex-cont .navigation .nav-list .current {
+    color: #2196f3;
+    position: relative;
+  }
+  header .flex-cont .navigation .nav-list .current::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #2196f3;
+  }
+  header .flex-cont .contacts-list {
+    display: flex;
+    flex-direction: column;
+  }
+  header .flex-cont .contacts-list .item + .item {
+    margin-top: 10px;
+  }
+  header .flex-cont .contacts-list .item .contacts-link {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1.167;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #757575;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    fill: #757575;
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  header .flex-cont .contacts-list .item .contacts-link:hover svg,
+  header .flex-cont .contacts-list .item .contacts-link:focus svg {
+    fill: #2196f3;
+  }
+  header .flex-cont .contacts-list .item .contacts-link svg {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header .flex-cont .navigation .logo {
+    margin-right: 93px;
+  }
+  header .flex-cont .contacts-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  header .flex-cont .contacts-list .item + .item {
     margin-left: 50px;
+    margin-top: 0;
+  }
+  header .flex-cont .contacts-list .item .contacts-link {
+    font-size: 14px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+  header .flex-cont .contacts-list .item .contacts-link .item svg {
+    margin-right: 10px;
   }
 }
 
