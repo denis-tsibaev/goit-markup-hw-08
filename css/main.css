@@ -222,28 +222,34 @@ address {
   opacity: 1;
 }
 
-.menu-button {
+.navigation .menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 60px;
+  padding: 0;
   outline-style: none;
   border-style: none;
   background-color: transparent;
-}
-
-.menu-close-button {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  width: 40px;
-  height: 40px;
-  border-style: none;
-  background-color: transparent;
-  padding: 0;
-  cursor: pointer;
-  fill: #212121;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 5;
 }
 
-.menu-close-button:hover, .menu-close-button:focus {
+.navigation .menu-button:hover, .navigation .menu-button:focus {
   fill: #2196f3;
+}
+
+.navigation .menu-button .icon-cross {
+  display: none;
+}
+
+.navigation .menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.navigation .menu-button.is-open .icon-burger {
+  display: none;
 }
 
 .modal-close-button-icon {
@@ -328,13 +334,6 @@ address {
   margin-left: 10px;
 }
 
-.burger-icon {
-  fill: #000000;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -382,7 +381,7 @@ address {
 
 .modal-burger-menu {
   position: fixed;
-  z-index: 3;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 480px;
@@ -646,15 +645,6 @@ header .flex-cont .navigation {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-}
-
-header .flex-cont .navigation .menu-button {
-  padding: 20px 0 20px 20px;
-}
-
-header .flex-cont .navigation .menu-button:hover .burger-icon,
-header .flex-cont .navigation .menu-button:focus .burger-icon {
-  fill: #2196f3;
 }
 
 @media screen and (min-width: 768px) {
