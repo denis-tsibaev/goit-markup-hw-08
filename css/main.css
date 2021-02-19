@@ -181,7 +181,7 @@ address {
   opacity: 1;
 }
 
-.gallery .btn {
+.gallery .gallery-button-list .btn {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.62;
@@ -193,7 +193,7 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gallery .btn:hover, .gallery .btn:focus {
+.gallery .gallery-button-list .btn:hover, .gallery .gallery-button-list .btn:focus {
   color: #ffffff;
   background-color: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -1006,79 +1006,70 @@ header .flex-cont .navigation .mobile-burger-btn:focus .mobile-burger-icon {
 }
 
 .gallery {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.gallery .gallery-list {
+.gallery .gallery-button-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 34px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
-.gallery .gallery-list .item + .item {
+.gallery .gallery-button-list .item:not(:nth-last-child(-n + 2)) {
+  margin-bottom: 15px;
+}
+
+.gallery .gallery-button-list .item:not(:first-child):not(:nth-child(4)) {
   margin-left: 8px;
 }
 
-.gallery .project-list {
-  display: flex;
-  flex-wrap: wrap;
+.gallery .project-list .item {
+  border: 1px solid #eeeeee;
 }
 
-.gallery .project-list .item {
-  max-width: 370px;
-  width: calc((100%-60px) / 3);
-  border: 1px solid #eeeeee;
-  margin-right: 30px;
+.gallery .project-list .item:not(:last-child) {
   margin-bottom: 30px;
 }
 
-.gallery .project-list .item:nth-child(3n) {
-  margin-right: 0;
-}
-
-.gallery .project-list .item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
-
-.gallery .project-list .item .project-link {
+.gallery .project-list .project-link {
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gallery .project-list .item .project-link:hover, .gallery .project-list .item .project-link:focus {
+.gallery .project-list .project-link:hover, .gallery .project-list .project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.gallery .project-list .item .project-link .project-thumb {
+.gallery .project-list .project-link .project-thumb {
   position: relative;
   overflow: hidden;
 }
 
-.gallery .project-list .item .project-link .project-thumb .project-overlay {
+.gallery .project-list .project-link .project-thumb .project-overlay {
   position: absolute;
   top: 100%;
   width: 100%;
   height: 100%;
-  padding: 63px 24px;
+  padding: 24px 24px;
   background-color: rgba(33, 150, 243, 0.9);
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gallery .project-list .item .project-link .project-thumb .project-overlay p {
+.gallery .project-list .project-link .project-thumb .project-overlay p {
   font-size: 18px;
   line-height: 1.556;
   color: #ffffff;
 }
 
-.gallery .project-list .item .project-link .project-description {
+.gallery .project-list .project-link .project-description {
   padding: 20px 24px;
 }
 
-.gallery .project-list .item .project-link .project-description h3 {
+.gallery .project-list .project-link .project-description h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -1087,16 +1078,60 @@ header .flex-cont .navigation .mobile-burger-btn:focus .mobile-burger-icon {
   margin-bottom: 4px;
 }
 
-.gallery .project-list .item .project-link .project-description p {
+.gallery .project-list .project-link .project-description p {
   font-size: 16px;
   line-height: 1.875;
   color: #757575;
   margin: 0;
 }
 
-.gallery .project-list .item .project-link:hover .project-overlay,
-.gallery .project-list .item .project-link:focus .project-overlay {
+.gallery .project-list .project-link:hover .project-overlay,
+.gallery .project-list .project-link:focus .project-overlay {
   transform: translateY(-100%);
+}
+
+@media screen and (min-width: 768px) {
+  .gallery .gallery-button-list {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .gallery .gallery-button-list .item:nth-child(n) {
+    margin-bottom: 0;
+  }
+  .gallery .gallery-button-list .item + .item {
+    margin-left: 8px;
+  }
+  .gallery .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .gallery .project-list .item {
+    width: 354px;
+  }
+  .gallery .project-list .item:nth-child(2n) {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .gallery .gallery-button-list {
+    margin-bottom: 80px;
+  }
+  .gallery .project-list {
+    margin: -30px;
+  }
+  .gallery .project-list .item:last-child {
+    margin-bottom: 30px;
+  }
+  .gallery .project-list .item {
+    margin-left: 30px;
+  }
 }
 
 .customers {

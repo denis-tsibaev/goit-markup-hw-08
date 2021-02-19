@@ -20,7 +20,15 @@
 	<header class="header-portfolio">
 		<div class="container flex-cont">
 			<nav class="navigation">
-				<a class="logo" href="./index.html"> <span class="logo-accent">Web</span>Studio</a>
+				<a class="logo" href="./index.html"><span class="logo-accent">Web</span>Studio</a>
+				<button class="mobile-burger-btn" type="button" data-modal-open>
+					<svg class="mobile-burger-icon" width="24" height="16" viewBox="0 0 24 16" fill=""
+						xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M0 2.66667V0H24V2.66667H0ZM0 9.33333H24V6.66667H0V9.33333ZM0 16H24V13.3333H0V16Z"
+							fill="" />
+					</svg>
+				</button>
 				<ul class="nav-list">
 					<li class="item">
 						<a href="./index.html">Студия</a>
@@ -52,30 +60,81 @@
 				</li>
 			</ul>
 		</div>
+
+		<!-- Модальное окно меню бургер -->
+		<div class="modal-burger-menu is-hidden" data-modal>
+			<ul class="nav-list-mobile">
+				<li class="item">
+					<a class="current" href="./index.html">Студия</a>
+				</li>
+				<li class="item">
+					<a href="./portfolio.html">Портфолио</a>
+				</li>
+				<li class="item">
+					<a href="#contacts">Контакты</a>
+				</li>
+			</ul>
+			<ul class="contacts-list-mobile">
+				<li class="item">
+					<a class="contacts-link-tel" href="tel:+380961111111">
+						+38 096 111 11 11
+					</a>
+				</li>
+				<li class="item">
+					<a class="contacts-link-mail" href="mailto:info@devstudio.com">
+						info@devstudio.com
+					</a>
+				</li>
+			</ul>
+			<ul class="social-list">
+				<li><a href="javascript:void(0);">Instagram</a></li>
+				<li><a href="javascript:void(0);">Twitter</a></li>
+				<li><a href="javascript:void(0);">Facebook</a></li>
+				<li><a href="javascript:void(0);">LinkedIn</a></li>
+			</ul>
+
+			<button class="modal-menu-close-button" type="button" data-modal-close>
+				<svg width="19" height="19" viewBox="0 0 19 19" fill="" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M18.6667 1.88L16.7867 0L9.33333 7.45334L1.88 0L0 1.88L7.45334 9.33333L0 16.7867L1.88 18.6667L9.33333 11.2133L16.7867 18.6667L18.6667 16.7867L11.2133 9.33333L18.6667 1.88Z"
+						fill="" />
+				</svg>
+
+			</button>
+		</div>
 	</header>
 	<!-- //Шапка сайта -->
 
 
 	<!-- секция кнопок и карточек -->
 	<!-- кнопки  -->
-	<!-- <section class="gallery">
+	<section class="gallery">
 		<div class="container">
-			<ul class="gallery-list">
+			<ul class="gallery-button-list">
 				<li class="item"><button class="btn" type="button">Все</button></li>
 				<li class="item"><button class="btn" type="button">Веб-сайты</button></li>
 				<li class="item"><button class="btn" type="button">Приложения</button></li>
 				<li class="item"><button class="btn" type="button">Дизайн</button></li>
 				<li class="item"><button class="btn" type="button">Маркетинг</button></li>
-			</ul> -->
+			</ul>
 
-	<!-- Карточки  -->
-
-	<!-- <ul class="project-list">
-
+			<!-- Карточки  -->
+			<ul class="project-list">
 				<li class="item">
-					<a class="project-link" href="">
+					<a class="project-link" href="javascript:void(0);">
 						<div class="project-thumb">
-							<img src="./img_portfolio/img1.jpg" alt="галерея работ" width="370" height="294">
+							<picture>
+								<source
+									srcset="./img-portfolio/desktop/gallery-desktop1.jpg 1x, ./img-portfolio/desktop/gallery-desktop1@2x.jpg 2x"
+									media="(min-width: 1200px">
+								<source
+									srcset="./img-portfolio/tablet/gallery-tablet1.jpg 1x, ./img-portfolio/tablet/gallery-tablet1@2x.jpg 2x"
+									media="(min-width: 768px">
+								<source
+									srcset="./img-portfolio/mobile/gallery-mobile1.jpg 1x, ./img-portfolio/mobile/gallery-mobile1@2x.jpg 2x"
+									media="(min-width: 480px">
+								<img src="./img-portfolio/mobile/gallery-mobile1.jpg" alt="галерея работ">
+							</picture>
 							<div class="project-overlay">
 								<p>Технокряк это современная площадка распространения коронавируса. Компании используют
 									эту
@@ -91,9 +150,20 @@
 				</li>
 
 				<li class="item">
-					<a class="project-link" href="">
+					<a class="project-link" href="javascript:void(0);">
 						<div class="project-thumb">
-							<img src="./img_portfolio/img2.jpg" alt="галерея работ" width="370" height="294">
+							<picture>
+								<source
+									srcset="./img-portfolio/desktop/gallery-desktop2.jpg 1x, ./img-portfolio/desktop/gallery-desktop2@2x.jpg 2x"
+									media="(min-width: 1200px">
+								<source
+									srcset="./img-portfolio/tablet/gallery-tablet2.jpg 1x, ./img-portfolio/tablet/gallery-tablet2@2x.jpg 2x"
+									media="(min-width: 768px">
+								<source
+									srcset="./img-portfolio/mobile/gallery-mobile2.jpg 1x, ./img-portfolio/mobile/gallery-mobile2@2x.jpg 2x"
+									media="(min-width: 480px">
+								<img src="./img-portfolio/mobile/gallery-mobile2.jpg" alt="галерея работ">
+							</picture>
 							<div class="project-overlay">
 								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eaque cumque rem,
 									quaerat asperiores fugiat assumenda aliquam laborum mollitia, placeat, impedit
@@ -109,9 +179,20 @@
 				</li>
 
 				<li class="item">
-					<a class="project-link" href="">
+					<a class="project-link" href="javascript:void(0);">
 						<div class="project-thumb">
-							<img src="./img_portfolio/img3.jpg" alt="галерея работ" width="370" height="294">
+							<picture>
+								<source
+									srcset="./img-portfolio/desktop/gallery-desktop3.jpg 1x, ./img-portfolio/desktop/gallery-desktop3@2x.jpg 2x"
+									media="(min-width: 1200px">
+								<source
+									srcset="./img-portfolio/tablet/gallery-tablet3.jpg 1x, ./img-portfolio/tablet/gallery-tablet3@2x.jpg 2x"
+									media="(min-width: 768px">
+								<source
+									srcset="./img-portfolio/mobile/gallery-mobile3.jpg 1x, ./img-portfolio/mobile/gallery-mobile3@2x.jpg 2x"
+									media="(min-width: 480px">
+								<img src="./img-portfolio/mobile/gallery-mobile3.jpg" alt="галерея работ">
+							</picture>
 							<div class="project-overlay">
 								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eaque cumque rem,
 									quaerat asperiores fugiat assumenda aliquam laborum mollitia, placeat, impedit
@@ -127,9 +208,20 @@
 				</li>
 
 				<li class="item">
-					<a class="project-link" href="">
+					<a class="project-link" href="javascript:void(0);">
 						<div class="project-thumb">
-							<img src="./img_portfolio/img4.jpg" alt="галерея работ" width="370" height="294">
+							<picture>
+								<source
+									srcset="./img-portfolio/desktop/gallery-desktop4.jpg 1x, ./img-portfolio/desktop/gallery-desktop4@2x.jpg 2x"
+									media="(min-width: 1200px">
+								<source
+									srcset="./img-portfolio/tablet/gallery-tablet4.jpg 1x, ./img-portfolio/tablet/gallery-tablet4@2x.jpg 2x"
+									media="(min-width: 768px">
+								<source
+									srcset="./img-portfolio/mobile/gallery-mobile4.jpg 1x, ./img-portfolio/mobile/gallery-mobile4@2x.jpg 2x"
+									media="(min-width: 480px">
+								<img src="./img-portfolio/mobile/gallery-mobile4.jpg" alt="галерея работ">
+							</picture>
 							<div class="project-overlay">
 								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eaque cumque rem,
 									quaerat asperiores fugiat assumenda aliquam laborum mollitia, placeat, impedit
@@ -145,9 +237,20 @@
 				</li>
 
 				<li class="item">
-					<a class="project-link" href="">
+					<a class="project-link" href="javascript:void(0);">
 						<div class="project-thumb">
-							<img src="./img_portfolio/img5.jpg" alt="галерея работ" width="370" height="294">
+							<picture>
+								<source
+									srcset="./img-portfolio/desktop/gallery-desktop5.jpg 1x, ./img-portfolio/desktop/gallery-desktop5@2x.jpg 2x"
+									media="(min-width: 1200px">
+								<source
+									srcset="./img-portfolio/tablet/gallery-tablet5.jpg 1x, ./img-portfolio/tablet/gallery-tablet5@2x.jpg 2x"
+									media="(min-width: 768px">
+								<source
+									srcset="./img-portfolio/mobile/gallery-mobile5.jpg 1x, ./img-portfolio/mobile/gallery-mobile5@2x.jpg 2x"
+									media="(min-width: 480px">
+								<img src="./img-portfolio/mobile/gallery-mobile5.jpg" alt="галерея работ">
+							</picture>
 							<div class="project-overlay">
 								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eaque cumque rem,
 									quaerat asperiores fugiat assumenda aliquam laborum mollitia, placeat, impedit
@@ -164,9 +267,20 @@
 				</li>
 
 				<li class="item">
-					<a class="project-link" href="">
+					<a class="project-link" href="javascript:void(0);">
 						<div class="project-thumb">
-							<img src="./img_portfolio/img6.jpg" alt="галерея работ" width="370" height="294">
+							<picture>
+								<source
+									srcset="./img-portfolio/desktop/gallery-desktop6.jpg 1x, ./img-portfolio/desktop/gallery-desktop6@2x.jpg 2x"
+									media="(min-width: 1200px">
+								<source
+									srcset="./img-portfolio/tablet/gallery-tablet6.jpg 1x, ./img-portfolio/tablet/gallery-tablet6@2x.jpg 2x"
+									media="(min-width: 768px">
+								<source
+									srcset="./img-portfolio/mobile/gallery-mobile6.jpg 1x, ./img-portfolio/mobile/gallery-mobile6@2x.jpg 2x"
+									media="(min-width: 480px">
+								<img src="./img-portfolio/mobile/gallery-mobile6.jpg" alt="галерея работ">
+							</picture>
 							<div class="project-overlay">
 								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eaque cumque rem,
 									quaerat asperiores fugiat assumenda aliquam laborum mollitia, placeat, impedit
@@ -182,9 +296,20 @@
 				</li>
 
 				<li class="item">
-					<a class="project-link" href="">
+					<a class="project-link" href="javascript:void(0);">
 						<div class="project-thumb">
-							<img src="./img_portfolio/img7.jpg" alt="галерея работ" width="370" height="294">
+							<picture>
+								<source
+									srcset="./img-portfolio/desktop/gallery-desktop7.jpg 1x, ./img-portfolio/desktop/gallery-desktop7@2x.jpg 2x"
+									media="(min-width: 1200px">
+								<source
+									srcset="./img-portfolio/tablet/gallery-tablet7.jpg 1x, ./img-portfolio/tablet/gallery-tablet7@2x.jpg 2x"
+									media="(min-width: 768px">
+								<source
+									srcset="./img-portfolio/mobile/gallery-mobile7.jpg 1x, ./img-portfolio/mobile/gallery-mobile7@2x.jpg 2x"
+									media="(min-width: 480px">
+								<img src="./img-portfolio/mobile/gallery-mobile7.jpg" alt="галерея работ">
+							</picture>
 							<div class="project-overlay">
 								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eaque cumque rem,
 									quaerat asperiores fugiat assumenda aliquam laborum mollitia, placeat, impedit
@@ -200,9 +325,20 @@
 				</li>
 
 				<li class="item">
-					<a class="project-link" href="">
+					<a class="project-link" href="javascript:void(0);">
 						<div class="project-thumb">
-							<img src="./img_portfolio/img8.jpg" alt="галерея работ" width="370" height="294">
+							<picture>
+								<source
+									srcset="./img-portfolio/desktop/gallery-desktop8.jpg 1x, ./img-portfolio/desktop/gallery-desktop8@2x.jpg 2x"
+									media="(min-width: 1200px">
+								<source
+									srcset="./img-portfolio/tablet/gallery-tablet8.jpg 1x, ./img-portfolio/tablet/gallery-tablet8@2x.jpg 2x"
+									media="(min-width: 768px">
+								<source
+									srcset="./img-portfolio/mobile/gallery-mobile8.jpg 1x, ./img-portfolio/mobile/gallery-mobile8@2x.jpg 2x"
+									media="(min-width: 480px">
+								<img src="./img-portfolio/mobile/gallery-mobile8.jpg" alt="галерея работ">
+							</picture>
 							<div class="project-overlay">
 								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eaque cumque rem,
 									quaerat asperiores fugiat assumenda aliquam laborum mollitia, placeat, impedit
@@ -218,9 +354,20 @@
 				</li>
 
 				<li class="item">
-					<a class="project-link" href="">
+					<a class="project-link" href="javascript:void(0);">
 						<div class="project-thumb">
-							<img src="./img_portfolio/img9.jpg" alt="галерея работ" width="370" height="294">
+							<picture>
+								<source
+									srcset="./img-portfolio/desktop/gallery-desktop9.jpg 1x, ./img-portfolio/desktop/gallery-desktop9@2x.jpg 2x"
+									media="(min-width: 1200px">
+								<source
+									srcset="./img-portfolio/tablet/gallery-tablet9.jpg 1x, ./img-portfolio/tablet/gallery-tablet9@2x.jpg 2x"
+									media="(min-width: 768px">
+								<source
+									srcset="./img-portfolio/mobile/gallery-mobile9.jpg 1x, ./img-portfolio/mobile/gallery-mobile9@2x.jpg 2x"
+									media="(min-width: 480px">
+								<img src="./img-portfolio/mobile/gallery-mobile9.jpg" alt="галерея работ">
+							</picture>
 							<div class="project-overlay">
 								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eaque cumque rem,
 									quaerat asperiores fugiat assumenda aliquam laborum mollitia, placeat, impedit
@@ -235,19 +382,19 @@
 					</a>
 				</li>
 			</ul>
-		</div>>
-	</section> -->
+		</div>
+	</section>
 	<!-- //секция  кнопок и карточек -->
 
 	<!-- футер  -->
-	<!-- <footer class="footer">
+	<footer class="footer">
 		<div class="container">
 			<div class="left-side">
 				<a class="logo" href="./index.html"><span class="logo-accent">Web</span>Studio</a>
 				<address>
 					г. Киев, пр-т Леси Украинки, 26
 				</address>
-				<ul class="footer-list">
+				<ul class="footer-contacts-list">
 					<li class="item">
 						<a id="contacts" class="footer-contacts-link"
 							href="mailto:info@example.com">info@example.com</a>
@@ -259,31 +406,31 @@
 			</div>
 			<div class="right-side">
 				<div class="footer-block-socialnet">
-					<h3>Присоединяйтесь</h3>
+					<h3 class="footer-title">Присоединяйтесь</h3>
 					<ul class="footer-socialnet-list">
 						<li>
-							<a class="footer-socialnet-link" href="">
+							<a class="footer-socialnet-link" href="javascript:void(0);">
 								<svg class="socialnet-icon">
 									<use href="./img/symbol-defs.svg#icon-instagram"></use>
 								</svg>
 							</a>
 						</li>
 						<li>
-							<a class="footer-socialnet-link" href="">
+							<a class="footer-socialnet-link" href="javascript:void(0);">
 								<svg class="socialnet-icon">
 									<use href="./img/symbol-defs.svg#icon-twitter"></use>
 								</svg>
 							</a>
 						</li>
 						<li>
-							<a class="footer-socialnet-link" href="">
+							<a class="footer-socialnet-link" href="javascript:void(0);">
 								<svg class="socialnet-icon">
 									<use href="./img/symbol-defs.svg#icon-facebook"></use>
 								</svg>
 							</a>
 						</li>
 						<li>
-							<a class="footer-socialnet-link" href="">
+							<a class="footer-socialnet-link" href="javascript:void(0);">
 								<svg class="socialnet-icon">
 									<use href="./img/symbol-defs.svg#icon-linkedin"></use>
 								</svg>
@@ -291,23 +438,26 @@
 						</li>
 					</ul>
 				</div>
-
-				<form action="GET" autocomplete="off">
-					<h3>Подпишитесь на рассылку</h3>
-					<label class="form-footer-label">
-						<input class="form-footer-input" type="email" name="user-email" placeholder="E-mail">
-					</label>
-					<button class="footer-submit-button" type="submit">Подписаться</button>
-				</form>
-
 			</div>
+
 		</div>
-	</footer> -->
+
+		<div class="form-div">
+			<h3 class="footer-title">Подпишитесь на рассылку</h3>
+			<form action="javascript:void(0);" method="GET" autocomplete="off">
+
+				<label class="form-footer-label">
+					<input class="form-footer-input" type="email" name="user-email" placeholder="E-mail">
+				</label>
+				<button class="footer-submit-button" type="submit">Подписаться</button>
+			</form>
+		</div>
+	</footer>
 	<!-- //футер  -->
 
 	<!-- Модальное окно  -->
 	<!-- не забыть вернуть class="backdrop is-hidden" в бэкдроп -->
-	<!-- <div class="backdrop is-hidden" data-modal>
+	<div class="backdrop is-hidden" data-modal>
 		<div class="modal">
 			<button class="modal-close-button" data-modal-close>
 				<svg class="modal-close-button-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"
@@ -362,7 +512,7 @@
 			</form>
 		</div>
 	</div>
-	<script src="./js/modal.js"></script> -->
+	<script src="./js/modal.js"></script>
 
 </body>
 <!-- вы добрались до финиша )) -->
