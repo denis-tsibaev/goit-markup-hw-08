@@ -117,6 +117,10 @@
       .item:nth-child(2n) {
         margin-left: 30px;
       }
+
+      .item:last-child {
+        margin-right: auto;
+      }
     }
   }
 }

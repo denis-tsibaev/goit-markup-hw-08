@@ -1113,6 +1113,9 @@ header .flex-cont .navigation .mobile-burger-btn:focus .mobile-burger-icon {
   .gallery .project-list .item:nth-child(2n) {
     margin-left: 30px;
   }
+  .gallery .project-list .item:last-child {
+    margin-right: auto;
+  }
 }
 
 @media screen and (min-width: 1200px) {
