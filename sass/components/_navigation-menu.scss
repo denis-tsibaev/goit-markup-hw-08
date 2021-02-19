@@ -7,11 +7,10 @@
   height: 796px;
   padding: 48px 40px;
   background-color: $white-color;
-  opacity: 1;
+  display: none;
 
-  &.is-hidden {
-    opacity: 0;
-    pointer-events: none;
+  &.is-open {
+    display: block;
   }
 
   .nav-list-mobile {
