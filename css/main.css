@@ -222,13 +222,13 @@ address {
   opacity: 1;
 }
 
-.mobile-burger-btn {
+.menu-button {
   outline-style: none;
   border-style: none;
   background-color: transparent;
 }
 
-.modal-menu-close-button {
+.menu-close-button {
   position: absolute;
   top: 10px;
   right: 15px;
@@ -242,7 +242,7 @@ address {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-menu-close-button:hover, .modal-menu-close-button:focus {
+.menu-close-button:hover, .menu-close-button:focus {
   fill: #2196f3;
 }
 
@@ -328,7 +328,7 @@ address {
   margin-left: 10px;
 }
 
-.mobile-burger-icon {
+.burger-icon {
   fill: #000000;
   transition-property: fill;
   transition-duration: 250ms;
@@ -648,12 +648,12 @@ header .flex-cont .navigation {
   justify-content: space-between;
 }
 
-header .flex-cont .navigation .mobile-burger-btn {
+header .flex-cont .navigation .menu-button {
   padding: 20px 0 20px 20px;
 }
 
-header .flex-cont .navigation .mobile-burger-btn:hover .mobile-burger-icon,
-header .flex-cont .navigation .mobile-burger-btn:focus .mobile-burger-icon {
+header .flex-cont .navigation .menu-button:hover .burger-icon,
+header .flex-cont .navigation .menu-button:focus .burger-icon {
   fill: #2196f3;
 }
 
@@ -717,9 +717,9 @@ header .flex-cont .navigation .mobile-burger-btn:focus .mobile-burger-icon {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  header .flex-cont .contacts-list .item .contacts-link:hover svg,
-  header .flex-cont .contacts-list .item .contacts-link:focus svg {
+  header .flex-cont .contacts-list .item .contacts-link:hover, header .flex-cont .contacts-list .item .contacts-link:focus {
     fill: #2196f3;
+    color: #2196f3;
   }
   header .flex-cont .contacts-list .item .contacts-link svg {
     margin-right: 8px;
@@ -1190,9 +1190,9 @@ header .flex-cont .navigation .mobile-burger-btn:focus .mobile-burger-icon {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customers .customers-list .customer-list-item .customer-logo-link:hover .customer-logo,
-.customers .customers-list .customer-list-item .customer-logo-link:focus .customer-logo {
+.customers .customers-list .customer-list-item .customer-logo-link:hover, .customers .customers-list .customer-list-item .customer-logo-link:focus {
   fill: #2196f3;
+  border-color: #2196f3;
 }
 
 @media screen and (min-width: 768px) {

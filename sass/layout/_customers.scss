@@ -33,9 +33,10 @@
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-        &:hover .customer-logo,
-        &:focus .customer-logo {
+        &:hover,
+        &:focus {
           fill: $accent-color;
+          border-color: $accent-color;
         }
       }
     }

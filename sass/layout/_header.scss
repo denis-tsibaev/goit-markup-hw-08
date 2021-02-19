@@ -13,11 +13,11 @@ header {
       align-items: baseline;
       justify-content: space-between;
 
-      .mobile-burger-btn {
+      .menu-button {
         padding: 20px 0 20px 20px;
 
-        &:hover .mobile-burger-icon,
-        &:focus .mobile-burger-icon {
+        &:hover .burger-icon,
+        &:focus .burger-icon {
           fill: $accent-color;
         }
       }
@@ -95,9 +95,10 @@ header {
             transition-duration: 250ms;
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-            &:hover svg,
-            &:focus svg {
+            &:hover,
+            &:focus {
               fill: $accent-color;
+              color: $accent-color;
             }
 
             svg {
