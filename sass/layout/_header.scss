@@ -2,19 +2,24 @@
   border-bottom: 1px solid $header-border;
 }
 header {
-  .contacts-list,
-  .nav-list {
+  .nav-list,
+  .contacts-list {
     display: none;
   }
 
   .flex-cont {
     .navigation {
       display: flex;
-      align-items: center;
+      align-items: baseline;
       justify-content: space-between;
 
-      .mobile-burger-icon {
-        padding: 21px 0 20px 21px;
+      .mobile-burger-btn {
+        padding: 20px 0 20px 20px;
+
+        &:hover .mobile-burger-icon,
+        &:focus .mobile-burger-icon {
+          fill: $accent-color;
+        }
       }
     }
   }
@@ -31,7 +36,7 @@ header {
         .logo {
           margin-right: 88px;
         }
-        .mobile-burger-icon {
+        .mobile-burger-btn {
           display: none;
         }
 
@@ -51,7 +56,6 @@ header {
           }
 
           .current {
-            color: $accent-color;
             position: relative;
 
             &::after {
@@ -170,7 +174,7 @@ header {
 //       }
 
 //       .current {
-//         color: $accent-color;
+//
 //         position: relative;
 
 //         &::after {

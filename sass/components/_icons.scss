@@ -89,3 +89,11 @@
   background-image: url("../img/svg/icon-send.svg");
   margin-left: 10px;
 }
+
+// бургер меню
+.mobile-burger-icon {
+  fill: $black-color;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
