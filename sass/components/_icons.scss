@@ -41,34 +41,36 @@
 }
 
 // индвидуальные иконки
-.customers-list .logo1 {
-  width: 45px;
-  height: 50px;
-}
+.customers-list {
+  .logo1 {
+    width: 45px;
+    height: 50px;
+  }
 
-.customers-list .logo2 {
-  width: 40px;
-  height: 52px;
-}
+  .logo2 {
+    width: 40px;
+    height: 52px;
+  }
 
-.customers-list .logo3 {
-  width: 41px;
-  height: 43px;
-}
+  .logo3 {
+    width: 41px;
+    height: 43px;
+  }
 
-.customers-list .logo4 {
-  width: 80px;
-  height: 43px;
-}
+  .logo4 {
+    width: 80px;
+    height: 43px;
+  }
 
-.customers-list .logo5 {
-  width: 59px;
-  height: 47px;
-}
+  .logo5 {
+    width: 59px;
+    height: 47px;
+  }
 
-.customers-list .logo6 {
-  width: 89px;
-  height: 46px;
+  .logo6 {
+    width: 89px;
+    height: 46px;
+  }
 }
 
 // иконка соцсети в футере

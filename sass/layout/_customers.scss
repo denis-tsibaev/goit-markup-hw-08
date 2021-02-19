@@ -12,6 +12,14 @@
       height: 90px;
       margin-bottom: 30px;
 
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+      }
+
+      &:nth-child(odd) {
+        margin-right: 30px;
+      }
+
       .customer-logo-link {
         width: 100%;
         height: 100%;
@@ -31,15 +39,6 @@
         }
       }
     }
-
-    .customer-list-item:nth-child(5),
-    .customer-list-item:nth-child(6) {
-      margin-bottom: 0;
-    }
-
-    .customer-list-item:nth-child(odd) {
-      margin-right: 30px;
-    }
   }
 }
 
@@ -52,20 +51,15 @@
       .customer-list-item {
         width: 226px;
         height: 90px;
-      }
-
-      .customer-list-item:not(:last-child) {
         margin-right: 30px;
-      }
 
-      .customer-list-item:nth-child(3) {
-        margin-right: 0;
-      }
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
 
-      .customer-list-item:nth-child(4),
-      .customer-list-item:nth-child(5),
-      .customer-list-item:nth-child(6) {
-        margin-bottom: 0;
+        &:nth-last-child(-n + 3) {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -77,18 +71,13 @@
     padding-bottom: 94px;
 
     .customers-list {
-      .customer-list-item:nth-child(1),
-      .customer-list-item:nth-child(2),
-      .customer-list-item:nth-child(3),
-      .customer-list-item:nth-child(4),
-      .customer-list-item:nth-child(5),
-      .customer-list-item:nth-child(6) {
-        margin: 0;
-      }
-
       .customer-list-item {
         width: 170px;
         height: 90px;
+
+        &:nth-child(n) {
+          margin: 0;
+        }
       }
 
       .customer-list-item + .customer-list-item {

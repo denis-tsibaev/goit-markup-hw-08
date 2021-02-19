@@ -37,6 +37,15 @@
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .backdrop {
+    .modal {
+      width: 528px;
+      height: 581px;
+    }
+  }
+}
+
 // .modal {
 //   position: absolute;
 //   top: 50%;
