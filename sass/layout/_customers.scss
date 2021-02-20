@@ -2,6 +2,10 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+  .container {
+    max-width: 449px;
+  }
+
   .customers-list {
     display: flex;
     flex-wrap: wrap;
@@ -12,12 +16,8 @@
       height: 90px;
       margin-bottom: 30px;
 
-      &:nth-last-child(-n + 2) {
+      &:last-child {
         margin-bottom: 0;
-      }
-
-      &:nth-child(odd) {
-        margin-right: 30px;
       }
 
       .customer-logo-link {
@@ -43,8 +43,30 @@
   }
 }
 
+@media screen and (min-width: 480px) {
+  .customers {
+    .container {
+      max-width: 480px;
+    }
+    .customers-list {
+      .customer-list-item {
+        &:nth-last-child(-n + 2) {
+          margin-bottom: 0;
+        }
+
+        &:nth-child(odd) {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .customers {
+    .container {
+      max-width: 768px;
+    }
     .customers-list {
       flex-wrap: wrap;
       justify-content: center;
@@ -68,6 +90,10 @@
 
 @media screen and (min-width: 1200px) {
   .customers {
+    .container {
+      max-width: 1200px;
+    }
+
     padding-top: 94px;
     padding-bottom: 94px;
 

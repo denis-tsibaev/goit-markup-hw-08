@@ -139,17 +139,18 @@
 }
 
 // форма в футере
-
 .footer {
   .form-footer-label {
     display: block;
-    margin-right: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     .form-footer-input {
       padding: 0;
       outline-style: none;
       color: $white-color;
-      width: 358px;
+      width: 100%;
+      max-width: 450px;
       height: 50px;
       border: 1px solid rgba(255, 255, 255, 0.3);
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -162,13 +163,6 @@
       &:focus {
         border-color: $accent-color;
       }
-    }
-  }
-}
-@media screen and (min-width: 768px) {
-  .footer {
-    .form-footer-input {
-      width: 450px;
     }
   }
 }
