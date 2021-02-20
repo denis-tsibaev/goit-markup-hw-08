@@ -100,9 +100,21 @@ a:hover:not(.logo):not(.project-link), a:focus:not(.logo):not(.project-link) {
   margin-right: auto;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -345,6 +357,8 @@ address {
   transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 93px 15px;
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -361,8 +375,8 @@ address {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 450px;
-  height: 609px;
+  width: 100%;
+  max-width: 450px;
   padding: 40px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -374,7 +388,7 @@ address {
 
 @media screen and (min-width: 1200px) {
   .backdrop .modal {
-    width: 528px;
+    max-width: 528px;
     height: 581px;
   }
 }
@@ -529,19 +543,11 @@ address {
   padding-left: 24px;
 }
 
-.modal .form .checkbox input:focus + .agreement::before {
-  background-image: url(../img/svg/check-border-acc.svg);
-}
-
-.modal .form .checkbox input:checked + .agreement::before {
-  background-image: url(../img/svg/icon-check.svg);
-}
-
 .modal .form .checkbox .agreement {
-  width: 350px;
+  display: inline;
   font-size: 12px;
   line-height: 1.167;
-  display: block;
+  letter-spacing: 0.02em;
   color: #757575;
 }
 
@@ -555,6 +561,7 @@ address {
   width: 16px;
   height: 15px;
   background-image: url(../img/svg/check-border.svg);
+  background-size: cover;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -563,6 +570,14 @@ address {
   text-decoration: underline;
   color: #2196f3;
   line-height: 1.71;
+}
+
+.modal .form .checkbox input:focus + .agreement::before {
+  background-image: url(../img/svg/check-border-acc.svg);
+}
+
+.modal .form .checkbox input:checked + .agreement::before {
+  background-image: url(../img/svg/icon-check.svg);
 }
 
 @media screen and (min-width: 1200px) {
@@ -836,9 +851,6 @@ header .flex-cont .navigation {
 }
 
 @media screen and (min-width: 768px) {
-  .feature .container {
-    max-width: 768px;
-  }
   .feature .feature-list {
     display: flex;
     flex-wrap: wrap;
@@ -854,9 +866,6 @@ header .flex-cont .navigation {
 }
 
 @media screen and (min-width: 1200px) {
-  .feature .container {
-    max-width: 1200px;
-  }
   .feature .feature-list .item {
     width: 270px;
   }
@@ -977,9 +986,6 @@ header .flex-cont .navigation {
 }
 
 @media screen and (min-width: 768px) {
-  .team .container {
-    max-width: 768px;
-  }
   .team .team-list {
     flex-direction: row;
     justify-content: center;
@@ -1000,9 +1006,6 @@ header .flex-cont .navigation {
   .team {
     padding-top: 94px;
     padding-bottom: 94px;
-  }
-  .team .container {
-    max-width: 1200px;
   }
   .team .team-list {
     display: flex;
@@ -1110,9 +1113,6 @@ header .flex-cont .navigation {
 }
 
 @media screen and (min-width: 768px) {
-  .gallery .container {
-    max-width: 768px;
-  }
   .gallery .gallery-button-list {
     margin-bottom: 30px;
     justify-content: center;
@@ -1141,9 +1141,6 @@ header .flex-cont .navigation {
   .gallery {
     padding-top: 94px;
     padding-bottom: 94px;
-  }
-  .gallery .container {
-    max-width: 1200px;
   }
   .gallery .gallery-button-list {
     margin-bottom: 80px;

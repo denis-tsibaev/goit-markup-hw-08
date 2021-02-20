@@ -9,6 +9,8 @@
   transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 93px 15px;
+  overflow-y: scroll;
 
   &.is-hidden {
     opacity: 0;
@@ -24,8 +26,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    width: 450px;
-    height: 609px;
+    width: 100%;
+    max-width: 450px;
+    // height: 100%;
+    // max-height: 609px;
     padding: 40px;
     background: $white-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -40,7 +44,7 @@
 @media screen and (min-width: 1200px) {
   .backdrop {
     .modal {
-      width: 528px;
+      max-width: 528px;
       height: 581px;
     }
   }
