@@ -264,6 +264,12 @@ address {
   display: none;
 }
 
+@media screen and (min-width: 768px) {
+  .navigation .menu-button {
+    display: none;
+  }
+}
+
 .modal-close-button-icon {
   fill: #000000;
   transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
@@ -393,23 +399,23 @@ address {
   }
 }
 
-.modal-burger-menu {
+header .modal-burger-menu {
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  width: 480px;
-  height: 796px;
+  width: 100%;
+  height: 100%;
   padding: 48px 40px;
   background-color: #ffffff;
   display: none;
 }
 
-.modal-burger-menu.is-open {
+header .modal-burger-menu.is-open {
   display: block;
 }
 
-.modal-burger-menu .nav-list-mobile {
+header .modal-burger-menu .nav-list-mobile {
   font-size: 40px;
   line-height: 1.175;
   font-weight: 500;
@@ -417,15 +423,15 @@ address {
   margin-bottom: 302px;
 }
 
-.modal-burger-menu .nav-list-mobile .item + .item {
+header .modal-burger-menu .nav-list-mobile .item + .item {
   margin-top: 32px;
 }
 
-.modal-burger-menu .nav-list-mobile .item a {
+header .modal-burger-menu .nav-list-mobile .item a {
   display: inline-block;
 }
 
-.modal-burger-menu .contacts-list-mobile .contacts-link-tel {
+header .modal-burger-menu .contacts-list-mobile .contacts-link-tel {
   font-size: 34px;
   line-height: 1.176;
   font-weight: 500;
@@ -434,7 +440,7 @@ address {
   margin-bottom: 32px;
 }
 
-.modal-burger-menu .contacts-list-mobile .contacts-link-mail {
+header .modal-burger-menu .contacts-list-mobile .contacts-link-mail {
   font-size: 24px;
   line-height: 1.167;
   font-weight: 500;
@@ -443,7 +449,7 @@ address {
   margin-bottom: 64px;
 }
 
-.modal-burger-menu .social-list {
+header .modal-burger-menu .social-list {
   display: flex;
   font-size: 18px;
   line-height: 1.222;
@@ -451,15 +457,15 @@ address {
   letter-spacing: 0.02em;
 }
 
-.modal-burger-menu .social-list li + li {
+header .modal-burger-menu .social-list li + li {
   margin-left: 20px;
 }
 
-.modal-burger-menu .social-list li {
+header .modal-burger-menu .social-list li {
   display: flex;
 }
 
-.modal-burger-menu .social-list li::after {
+header .modal-burger-menu .social-list li::after {
   content: "";
   width: 0;
   height: 22px;
@@ -467,8 +473,14 @@ address {
   margin-left: 10px;
 }
 
-.modal-burger-menu .social-list a {
+header .modal-burger-menu .social-list a {
   color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-burger-menu {
+    display: none;
+  }
 }
 
 .modal .form {
