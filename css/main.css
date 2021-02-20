@@ -8,6 +8,10 @@ body {
   color: #212121;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 h1 {
   font-size: 26px;
   line-height: 1.62;
