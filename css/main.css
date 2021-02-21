@@ -238,7 +238,7 @@ address {
   opacity: 1;
 }
 
-.navigation .menu-button {
+header .navigation .menu-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -252,24 +252,24 @@ address {
   z-index: 5;
 }
 
-.navigation .menu-button:hover, .navigation .menu-button:focus {
+header .navigation .menu-button:hover, header .navigation .menu-button:focus {
   fill: #2196f3;
 }
 
-.navigation .menu-button .icon-cross {
+header .navigation .menu-button .icon-cross {
   display: none;
 }
 
-.navigation .menu-button.is-open .icon-cross {
+header .navigation .menu-button.is-open .icon-cross {
   display: block;
 }
 
-.navigation .menu-button.is-open .icon-burger {
+header .navigation .menu-button.is-open .icon-burger {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .navigation .menu-button {
+  header .navigation .menu-button {
     display: none;
   }
 }
@@ -403,7 +403,7 @@ address {
   }
 }
 
-header .modal-burger-menu {
+header .burger-menu {
   position: fixed;
   z-index: 1;
   top: 0;
@@ -415,11 +415,11 @@ header .modal-burger-menu {
   display: none;
 }
 
-header .modal-burger-menu.is-open {
+header .burger-menu.is-open {
   display: block;
 }
 
-header .modal-burger-menu .nav-list-mobile {
+header .burger-menu .nav-list-mobile {
   font-size: 40px;
   line-height: 1.175;
   font-weight: 500;
@@ -427,15 +427,15 @@ header .modal-burger-menu .nav-list-mobile {
   margin-bottom: 302px;
 }
 
-header .modal-burger-menu .nav-list-mobile .item + .item {
+header .burger-menu .nav-list-mobile .item + .item {
   margin-top: 32px;
 }
 
-header .modal-burger-menu .nav-list-mobile .item a {
+header .burger-menu .nav-list-mobile .item a {
   display: inline-block;
 }
 
-header .modal-burger-menu .contacts-list-mobile .contacts-link-tel {
+header .burger-menu .contacts-list-mobile .contacts-link-tel {
   font-size: 34px;
   line-height: 1.176;
   font-weight: 500;
@@ -444,7 +444,7 @@ header .modal-burger-menu .contacts-list-mobile .contacts-link-tel {
   margin-bottom: 32px;
 }
 
-header .modal-burger-menu .contacts-list-mobile .contacts-link-mail {
+header .burger-menu .contacts-list-mobile .contacts-link-mail {
   font-size: 24px;
   line-height: 1.167;
   font-weight: 500;
@@ -453,7 +453,7 @@ header .modal-burger-menu .contacts-list-mobile .contacts-link-mail {
   margin-bottom: 64px;
 }
 
-header .modal-burger-menu .social-list {
+header .burger-menu .social-list {
   display: flex;
   font-size: 18px;
   line-height: 1.222;
@@ -461,15 +461,15 @@ header .modal-burger-menu .social-list {
   letter-spacing: 0.02em;
 }
 
-header .modal-burger-menu .social-list li + li {
+header .burger-menu .social-list li + li {
   margin-left: 20px;
 }
 
-header .modal-burger-menu .social-list li {
+header .burger-menu .social-list li {
   display: flex;
 }
 
-header .modal-burger-menu .social-list li::after {
+header .burger-menu .social-list li::after {
   content: "";
   width: 0;
   height: 22px;
@@ -477,12 +477,12 @@ header .modal-burger-menu .social-list li::after {
   margin-left: 10px;
 }
 
-header .modal-burger-menu .social-list a {
+header .burger-menu .social-list a {
   color: #2196f3;
 }
 
 @media screen and (min-width: 768px) {
-  .modal-burger-menu {
+  .burger-menu {
     display: none;
   }
 }

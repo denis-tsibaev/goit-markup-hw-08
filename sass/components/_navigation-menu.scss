@@ -1,7 +1,7 @@
 header {
   //   position: relative;
 
-  .modal-burger-menu {
+  .burger-menu {
     position: fixed;
     z-index: 1;
     top: 0;
@@ -84,7 +84,7 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-  .modal-burger-menu {
+  .burger-menu {
     display: none;
   }
 }
