@@ -4,7 +4,7 @@ body {
     .burger-menu {
       position: absolute;
       z-index: 1;
-      top: 0;
+      //   top: 100%;
       left: 0;
       width: 100%;
       height: 100%;
@@ -45,6 +45,10 @@ body {
           letter-spacing: 0.02em;
           color: $accent-color;
           margin-bottom: 32px;
+
+          @media screen and (max-width: 424px) {
+            font-size: 27px;
+          }
         }
 
         .contacts-link-mail {
@@ -59,24 +63,30 @@ body {
 
       .social-list {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         font-size: 18px;
         line-height: 1.222;
         font-weight: 500;
         letter-spacing: 0.02em;
 
-        @media screen and (max-width: 480px) {
-          font-size: 14px;
-        }
-
-        li + li {
-          margin-left: 20px;
+        @media screen and (max-width: 374px) {
+          font-size: 16px;
         }
 
         li {
           display: flex;
         }
 
-        li::after {
+        li + li {
+          margin-left: 10px;
+        }
+
+        li:not(:nth-last-child(-n + 2)) {
+          margin-bottom: 20px;
+        }
+
+        li:not(:last-child)::after {
           content: "";
           width: 0;
           height: 22px;
