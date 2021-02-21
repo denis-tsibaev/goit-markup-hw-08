@@ -403,8 +403,12 @@ header .navigation .menu-button.is-open .icon-burger {
   }
 }
 
-header .burger-menu {
-  position: fixed;
+body {
+  position: relative;
+}
+
+body header .burger-menu {
+  position: absolute;
   z-index: 1;
   top: 0;
   left: 0;
@@ -415,11 +419,17 @@ header .burger-menu {
   display: none;
 }
 
-header .burger-menu.is-open {
+body header .burger-menu.is-open {
   display: block;
 }
 
-header .burger-menu .nav-list-mobile {
+@media screen and (min-width: 768px) {
+  body header .burger-menu.is-open {
+    display: none;
+  }
+}
+
+body header .burger-menu .nav-list-mobile {
   font-size: 40px;
   line-height: 1.175;
   font-weight: 500;
@@ -427,15 +437,15 @@ header .burger-menu .nav-list-mobile {
   margin-bottom: 302px;
 }
 
-header .burger-menu .nav-list-mobile .item + .item {
+body header .burger-menu .nav-list-mobile .item + .item {
   margin-top: 32px;
 }
 
-header .burger-menu .nav-list-mobile .item a {
+body header .burger-menu .nav-list-mobile .item a {
   display: inline-block;
 }
 
-header .burger-menu .contacts-list-mobile .contacts-link-tel {
+body header .burger-menu .contacts-list-mobile .contacts-link-tel {
   font-size: 34px;
   line-height: 1.176;
   font-weight: 500;
@@ -444,7 +454,7 @@ header .burger-menu .contacts-list-mobile .contacts-link-tel {
   margin-bottom: 32px;
 }
 
-header .burger-menu .contacts-list-mobile .contacts-link-mail {
+body header .burger-menu .contacts-list-mobile .contacts-link-mail {
   font-size: 24px;
   line-height: 1.167;
   font-weight: 500;
@@ -453,7 +463,7 @@ header .burger-menu .contacts-list-mobile .contacts-link-mail {
   margin-bottom: 64px;
 }
 
-header .burger-menu .social-list {
+body header .burger-menu .social-list {
   display: flex;
   font-size: 18px;
   line-height: 1.222;
@@ -461,15 +471,21 @@ header .burger-menu .social-list {
   letter-spacing: 0.02em;
 }
 
-header .burger-menu .social-list li + li {
+@media screen and (max-width: 480px) {
+  body header .burger-menu .social-list {
+    font-size: 14px;
+  }
+}
+
+body header .burger-menu .social-list li + li {
   margin-left: 20px;
 }
 
-header .burger-menu .social-list li {
+body header .burger-menu .social-list li {
   display: flex;
 }
 
-header .burger-menu .social-list li::after {
+body header .burger-menu .social-list li::after {
   content: "";
   width: 0;
   height: 22px;
@@ -477,14 +493,8 @@ header .burger-menu .social-list li::after {
   margin-left: 10px;
 }
 
-header .burger-menu .social-list a {
+body header .burger-menu .social-list a {
   color: #2196f3;
-}
-
-@media screen and (min-width: 768px) {
-  .burger-menu {
-    display: none;
-  }
 }
 
 .modal .form {
