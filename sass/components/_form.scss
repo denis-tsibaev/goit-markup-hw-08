@@ -144,8 +144,11 @@
 .footer {
   .form-footer-label {
     display: block;
-    padding-left: 15px;
-    padding-right: 15px;
+
+    @media screen and (max-width: 767px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
 
     .form-footer-input {
       padding: 0;
@@ -177,7 +180,6 @@
     }
 
     .form-footer-label {
-      display: inline-block;
       margin-right: 12px;
 
       .form-footer-input {
