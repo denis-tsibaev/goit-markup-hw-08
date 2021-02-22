@@ -403,14 +403,23 @@ header .navigation .menu-button.is-open .icon-burger {
 
 @media screen and (min-width: 768px) {
   .backdrop .modal {
-    top: 50%;
+    top: 77px;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, 0) scale(1);
     max-width: 450px;
     max-height: 609px;
+    overflow-y: scroll;
   }
   .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.6);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .backdrop .modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
@@ -459,36 +468,42 @@ body header .burger-menu .nav-list-mobile {
   margin-bottom: 302px;
 }
 
-body header .burger-menu .nav-list-mobile .item + .item {
-  margin-top: 32px;
+body header .burger-menu .nav-list-mobile .item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 body header .burger-menu .nav-list-mobile .item a {
   display: inline-block;
 }
 
-body header .burger-menu .contacts-list-mobile .contacts-link-tel {
+body header .burger-menu .contacts-list-mobile {
+  margin-bottom: 64px;
+}
+
+body header .burger-menu .contacts-list-mobile .item-mobile {
+  margin-bottom: 32px;
+}
+
+body header .burger-menu .contacts-list-mobile .item-mobile .contacts-link-tel {
   font-size: 34px;
   line-height: 1.176;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #2196f3;
-  margin-bottom: 32px;
 }
 
 @media screen and (max-width: 424px) {
-  body header .burger-menu .contacts-list-mobile .contacts-link-tel {
+  body header .burger-menu .contacts-list-mobile .item-mobile .contacts-link-tel {
     font-size: 27px;
   }
 }
 
-body header .burger-menu .contacts-list-mobile .contacts-link-mail {
+body header .burger-menu .contacts-list-mobile .item-email .contacts-link-email {
   font-size: 24px;
   line-height: 1.167;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #757575;
-  margin-bottom: 64px;
 }
 
 body header .burger-menu .social-list {
@@ -499,6 +514,7 @@ body header .burger-menu .social-list {
   line-height: 1.222;
   font-weight: 500;
   letter-spacing: 0.02em;
+  margin-bottom: 48px;
 }
 
 @media screen and (max-width: 374px) {

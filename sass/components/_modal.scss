@@ -49,17 +49,28 @@
 @media screen and (min-width: 768px) {
   .backdrop {
     .modal {
-      top: 50%;
+      top: 77px;
       left: 50%;
-      transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, 0) scale(1);
       max-width: 450px;
       max-height: 609px;
+      overflow-y: scroll;
     }
 
     &.is-hidden {
       .modal {
         transform: translate(-50%, -50%) scale(0.6);
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .backdrop {
+    .modal {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
     }
   }
 }

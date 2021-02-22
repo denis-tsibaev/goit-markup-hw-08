@@ -31,8 +31,8 @@ body {
         letter-spacing: 0.02em;
         margin-bottom: 302px;
 
-        .item + .item {
-          margin-top: 32px;
+        .item:not(:last-child) {
+          margin-bottom: 32px;
         }
 
         // не блок, чтобы не мешать иконке-крестику закрытия
@@ -42,29 +42,32 @@ body {
       }
 
       .contacts-list-mobile {
-        .contacts-link-tel {
-          font-size: 34px;
-          line-height: 1.176;
-          font-weight: 500;
-          letter-spacing: 0.02em;
-          color: $accent-color;
+        margin-bottom: 64px;
+        .item-mobile {
           margin-bottom: 32px;
 
-          @media screen and (max-width: 424px) {
-            font-size: 27px;
+          .contacts-link-tel {
+            font-size: 34px;
+            line-height: 1.176;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: $accent-color;
+
+            @media screen and (max-width: 424px) {
+              font-size: 27px;
+            }
           }
         }
-
-        .contacts-link-mail {
-          font-size: 24px;
-          line-height: 1.167;
-          font-weight: 500;
-          letter-spacing: 0.02em;
-          color: $second-dark-color;
-          margin-bottom: 64px;
+        .item-email {
+          .contacts-link-email {
+            font-size: 24px;
+            line-height: 1.167;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: $second-dark-color;
+          }
         }
       }
-
       .social-list {
         display: flex;
         flex-wrap: wrap;
@@ -73,6 +76,7 @@ body {
         line-height: 1.222;
         font-weight: 500;
         letter-spacing: 0.02em;
+        margin-bottom: 48px;
 
         @media screen and (max-width: 374px) {
           font-size: 16px;
