@@ -39,14 +39,14 @@
     pointer-events: none;
 
     .modal {
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 479px) {
         transform: translateY(-100%) scale(0.8);
       }
     }
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .backdrop {
     .modal {
       top: 77px;
@@ -54,7 +54,6 @@
       transform: translate(-50%, 0) scale(1);
       max-width: 450px;
       max-height: 609px;
-      overflow-y: scroll;
     }
 
     &.is-hidden {
