@@ -136,12 +136,25 @@
 }
 
 /* скрытие дефолтного чекбокса */
-.modal-checkbox-input {
+/* Олдскульный способ прятять чекбокс */
+.visually-hidden {
   position: absolute;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0000);
+  overflow: hidden;
 }
+
+// Этот способ скрытия не работает на сафари на iphone5s
+// .modal-checkbox-input {
+//   position: absolute;
+//   appearance: none;
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+// }
 
 // форма в футере
 .footer {
