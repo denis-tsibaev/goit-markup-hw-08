@@ -1,17 +1,21 @@
-const formEl = document.querySelector(".js-form");
+const refs = {
+  modal: document.querySelector("[data-modal]"),
+  form: document.querySelector(".js-form"),
+};
 
-const data = new FormData();
+refs.form.addEventListener("submit", onFormSubmit);
 
-formEl.addEventListener("submit", data);
+function onFormSubmit(e) {
+  e.preventDefault();
 
-console.log(data);
+  const nameValue = e.currentTarget.elements.name.value;
+  const phoneValue = e.currentTarget.elements.phone.value;
+  const emailValue = e.currentTarget.elements.email.value;
+  const messageValue = e.currentTarget.elements.message.value;
 
-// function onFormSubmit(e) {
-//   e.preventDefault();
+  const formData = { nameValue, phoneValue, emailValue, messageValue };
 
-//   const emailValue = e.currentTarget.elements.email.value;
-//   const phoneValue = e.currentTarget.elements.tel.value;
-//   const formData = { emailValue, phoneValue };
-
-//   console.log("formData", formData);
-// }
+  console.log("formData", formData);
+  refs.form.reset();
+  refs.modal.classList.toggle("is-hidden");
+}
