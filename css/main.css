@@ -475,6 +475,7 @@ body header .burger-menu .social-list {
 }
 body header .burger-menu .social-list li {
   display: flex;
+  height: 22px;
 }
 body header .burger-menu .social-list li + li {
   margin-left: 10px;
